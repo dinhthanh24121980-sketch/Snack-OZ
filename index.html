@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OZ - Tích thẻ đổi quà</title>
+  <meta name="description" content="Ăn cùng OZ - Tích thẻ đổi quà. Quét QR, vào web và bấm QUAY NGAY.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="oz-mark">OZ</div>
+        <div>
+          <div class="brand-title">ĂN CÙNG OZ</div>
+          <div class="brand-sub">TÍCH THẺ ĐỔI QUÀ</div>
+        </div>
+      </div>
+      <a class="hc-logo" href="https://www.haichau.com.vn/" target="_blank" rel="noopener"><img src="haichau-logo.png" alt="Hải Châu"></a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="ribbon">VÒNG QUAY MAY MẮN</div>
+          <h1>Ăn cùng <span>OZ</span> -<br>Tích thẻ đổi quà</h1>
+          <p class="tagline">OZ giòn tan - Ăn ngon ngập tràn</p>
+          <p class="instruction">Quét QR → vào thẳng web → bấm <b>QUAY NGAY</b></p>
+          <button class="primary" id="scrollToWheel">QUAY NGAY</button>
+        </div>
+        <div class="hero-note">
+          <span>8</span>
+          <small>GIẢI THƯỞNG</small>
+        </div>
+      </section>
+
+      <section class="game" id="game">
+        <div class="wheel-panel">
+          <div class="wheel-wrap">
+            <div class="pointer">▼</div>
+            <div class="wheel" id="wheel">
+              <div class="wheel-labels" id="wheelLabels"></div>
+              <div class="wheel-center">
+                <div class="oz-mini">OZ</div>
+                <strong>QUAY<br>NGAY</strong>
+              </div>
+            </div>
+          </div>
+          <button class="primary spin-btn" id="spinBtn">QUAY NGAY</button>
+          <p class="hint">Mỗi lượt quay nhận 1 phần quà.</p>
+        </div>
+
+        <aside class="result-card" id="resultCard">
+          <div class="result-ribbon">CHÚC MỪNG!</div>
+          <h2>Bạn đã trúng</h2>
+          <div class="gift-icon" id="giftIcon">🎁</div>
+          <div class="result-name" id="resultName">?</div>
+          <p class="result-sub">Nhập thông tin để xác nhận quà tặng</p>
+
+          <form id="claimForm">
+            <label>Họ và tên<input name="name" required placeholder="Nhập họ và tên"></label>
+            <label>Số điện thoại<input name="phone" required inputmode="tel" placeholder="Nhập số điện thoại"></label>
+            <label>Địa chỉ nhận quà<textarea name="address" required rows="2" placeholder="Nhập địa chỉ nhận quà"></textarea></label>
+            <button class="primary" type="submit">XÁC NHẬN</button>
+          </form>
+          <div class="success" id="success" hidden>Đã ghi nhận thông tin. Bộ phận phụ trách sẽ liên hệ xác nhận.</div>
+        </aside>
+      </section>
+
+      <div class="win-overlay" id="winOverlay" hidden>
+        <div class="win-modal" role="dialog" aria-modal="true">
+          <button class="win-close" id="winClose" aria-label="Đóng">×</button>
+          <div class="win-confetti">✦ ✦ ✦</div>
+          <div class="win-title">CHÚC MỪNG!</div>
+          <div class="win-subtitle">BẠN ĐÃ TRÚNG</div>
+          <div class="win-icon" id="winIcon">🎁</div>
+          <div class="win-prize" id="winPrize">Quà tặng OZ</div>
+          <button class="primary" id="claimPrizeBtn">NHẬN QUÀ</button>
+        </div>
+      </div>
+
+      <section class="prizes">
+        <div class="section-title">
+          <span>8</span>
+          <div><small>HỆ THỐNG QUÀ TẶNG</small><h2>Quà hấp dẫn đang chờ bạn</h2></div>
+        </div>
+        <div class="prize-grid" id="prizeGrid"></div>
+      </section>
+
+      <section class="steps">
+        <div class="step"><b>01</b><h3>Quét QR</h3><p>Quét mã trên thẻ để vào thẳng website.</p></div>
+        <div class="arrow">→</div>
+        <div class="step"><b>02</b><h3>Bấm QUAY NGAY</h3><p>Không cần nhập mã 8 số.</p></div>
+        <div class="arrow">→</div>
+        <div class="step"><b>03</b><h3>Tích điểm - đổi quà</h3><p>Nhập thông tin nhận quà khi trúng thưởng.</p></div>
+      </section>
+
+      <section class="footer-info">
+        <div><b>Thời gian khuyến mãi</b><br>10/10/2026 - 10/11/2027</div>
+        <div><b>Hotline</b><br>02438621520</div>
+        <a href="https://www.haichau.com.vn/" target="_blank" rel="noopener">haichau.com.vn</a>
+      </section>
+    </main>
+
+    <footer>OZ - Tích thẻ đổi quà · Hải Châu</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
